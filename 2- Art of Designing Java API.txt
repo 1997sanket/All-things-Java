@@ -1,0 +1,27 @@
+1. Instead of doing to much overload, create an object of some type.
+
+2. When there is a need for building object like in Streams, used Builder Pattern.
+
+3. Method argument and return type must be as generic as possible.
+
+4. Allow your clients to use Lambdas. 
+	Eg: if SOldier class has method which takes Weapon interface,
+		and Weapon interface has two methods reloadGun() and shoot()
+		Now, when your client is invoking this method he has to pass 
+		anonymous object of type Weapon, which is verbose.
+		Instead create two functional interfaces a) Reload b) Shoot
+		that way client can pass lambdas, and at the end of the day,
+		you may not need your own Functional Interface, try to use Java's
+
+5. Dont throw checked exceptions
+
+6. Loan Patten
+	- Don't rely on client to close() files or release resources.
+
+7. Break large interfaces into smaller ones
+
+9. Return empty lists or unmodifiable list and Optionals.
+
+10. Use meaningful return types.
+	- Dont use Map<String , Map<Employee, List<String>>> 
+	- Do some more code and return an object instead
